@@ -70,7 +70,7 @@ export function Navbar() {
           aria-expanded={open}
           className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-navy lg:hidden"
         >
-          {open ? <Menu className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </nav>
 
