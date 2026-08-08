@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { TrustBar } from "@/components/site/TrustBar";
+import { FeatureGrid } from "@/components/site/FeatureGrid";
+import { PhilosophySection } from "@/components/site/PhilosophySection";
+import { FounderBanner } from "@/components/site/FounderBanner";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Newsletter } from "@/components/site/Newsletter";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "LifeOS — One Assistant. One Memory. One Life." },
+      {
+        name: "description",
+        content:
+          "LifeOS is the AI operating system for your life — it remembers everything, understands you, and manages tasks, money, travel and wellness in one place.",
+      },
+      { property: "og:title", content: "LifeOS — One Assistant. One Memory. One Life." },
+      {
+        property: "og:description",
+        content: "The AI operating system for your entire life. Loved by 2,000+ early users.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen overflow-x-hidden bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustBar />
+        <FeatureGrid />
+        <PhilosophySection />
+        <FounderBanner />
+        <Testimonials />
+        <Newsletter />
+      </main>
+      <Footer />
     </div>
   );
 }
