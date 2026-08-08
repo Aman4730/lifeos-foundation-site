@@ -17,7 +17,7 @@ export function Avatar({
   className?: string;
   index?: number;
 }) {
-  const [from, to] = palettes[index % palettes.length];
+  const [from, to] = palettes[index % palettes.length] ?? palettes[0]!;
   const initials = name
     .split(" ")
     .map((p) => p[0])
