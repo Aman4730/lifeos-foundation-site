@@ -28,31 +28,29 @@ export function Testimonials() {
 
   return (
     <section id="lifescore" className="scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
-        <Reveal className="text-center">
-          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold">
-            What our users say
-          </p>
-          <h2 className="mt-3 font-display text-3xl tracking-[-0.02em] text-navy sm:text-[2.2rem]">
+      <div className="container-page py-20 lg:py-[120px]">
+        <Reveal className="mx-auto max-w-[720px] text-center">
+          <p className="eyebrow text-subtle">What our users say</p>
+          <h2 className="display-section mt-4 text-ink">
             What our early users say
           </h2>
         </Reveal>
 
-        <ul className="mt-10 grid gap-4 md:grid-cols-3">
+        <ul className="mt-16 grid gap-4 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal as="li" key={t.name} delay={i * 80} className="h-full">
-              <figure className="flex h-full flex-col rounded-2xl border border-border bg-surface p-6 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-                <Quote className="h-5 w-5 fill-gold/30 text-gold/40" />
-                <blockquote className="mt-3 flex-1 text-[13.5px] leading-relaxed text-navy/80">
+              <figure className="flex h-full flex-col rounded-lg border border-border bg-surface p-7 transition-colors duration-300 hover:border-ink/25">
+                <Quote className="h-5 w-5 fill-border text-border" />
+                <blockquote className="mt-5 flex-1 text-[17px] leading-[1.6] tracking-[-0.015em] text-ink">
                   {t.quote}
                 </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3">
+                <figcaption className="mt-8 flex items-center gap-3">
                   <Avatar name={t.name} index={i + 1} />
                   <span className="min-w-0">
-                    <span className="block truncate text-[13px] font-semibold text-navy">
+                    <span className="block truncate text-[15px] font-semibold text-ink">
                       {t.name}
                     </span>
-                    <span className="block text-xs text-muted-foreground">{t.role}</span>
+                    <span className="block text-[14px] text-ink-soft">{t.role}</span>
                   </span>
                 </figcaption>
               </figure>
@@ -60,7 +58,7 @@ export function Testimonials() {
           ))}
         </ul>
 
-        <div className="mt-8 flex justify-center gap-2">
+        <div className="mt-12 flex justify-center gap-2">
           {[0, 1, 2, 3, 4].map((i) => (
             <button
               key={i}
@@ -69,7 +67,7 @@ export function Testimonials() {
               onClick={() => setActive(i)}
               className={cn(
                 "h-1.5 rounded-full transition-all",
-                active === i ? "w-5 bg-gold" : "w-1.5 bg-border hover:bg-muted-foreground/40",
+                active === i ? "w-5 bg-ink" : "w-1.5 bg-border hover:bg-subtle",
               )}
             />
           ))}

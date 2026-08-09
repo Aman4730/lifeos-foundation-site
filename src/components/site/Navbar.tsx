@@ -28,28 +28,28 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 border-b border-transparent transition-colors",
-        scrolled && "border-border/70 bg-background/85 backdrop-blur-md",
+        scrolled && "border-border bg-background/90 backdrop-blur-md",
       )}
     >
-      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-8">
+      <nav className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-5">
         <a href="#home" className="min-w-0" aria-label="LifeOS home">
           <Logo />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
-          <ul className="flex items-center gap-7 text-[13px] text-muted-foreground">
+        <div className="hidden items-center gap-10 lg:flex">
+          <ul className="flex items-center gap-8 text-[14px] font-medium text-ink-soft xl:gap-9">
             {links.map((link, i) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   className={cn(
-                    "relative py-1 transition-colors hover:text-navy",
-                    i === 0 && "font-medium text-gold",
+                    "relative py-1 transition-colors hover:text-ink",
+                    i === 0 && "text-ink",
                   )}
                 >
                   {link.label}
                   {i === 0 && (
-                    <span className="absolute -bottom-1 left-1/2 h-px w-4 -translate-x-1/2 bg-gold" />
+                    <span className="absolute -bottom-1 left-0 h-px w-full bg-ink" />
                   )}
                 </a>
               </li>
@@ -57,7 +57,7 @@ export function Navbar() {
           </ul>
           <a
             href="#founder"
-            className="rounded-lg bg-navy px-5 py-2.5 text-[13px] font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] active:translate-y-0"
+            className="rounded-lg bg-ink px-5 py-2.5 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-ink/90"
           >
             Get Started
           </a>
@@ -68,7 +68,7 @@ export function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-navy lg:hidden"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-ink lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -76,13 +76,13 @@ export function Navbar() {
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
-          <ul className="mx-auto max-w-7xl px-5 py-3">
+          <ul className="container-page py-3">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-border/60 py-3 text-sm text-muted-foreground transition-colors hover:text-navy"
+                  className="block border-b border-border py-3.5 text-[14px] font-medium text-ink-soft transition-colors hover:text-ink"
                 >
                   {link.label}
                 </a>
@@ -92,7 +92,7 @@ export function Navbar() {
               <a
                 href="#founder"
                 onClick={() => setOpen(false)}
-                className="block rounded-lg bg-navy px-5 py-3 text-center text-sm font-medium text-primary-foreground"
+                className="block rounded-lg bg-ink px-5 py-3.5 text-center text-[15px] font-semibold text-primary-foreground"
               >
                 Get Started
               </a>
