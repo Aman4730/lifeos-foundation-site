@@ -13,29 +13,27 @@ export type Feature = {
 export function FeatureCard({ feature }: { feature: Feature }) {
   const Icon = feature.icon;
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-5 shadow-[var(--shadow-soft)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[var(--shadow-lift)]">
-      <div className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-3">
+    <article className="group flex h-full flex-col rounded-[14px] border border-border bg-surface p-6 transition-all duration-[220ms] ease-[var(--ease-premium)] hover:-translate-y-[2px] hover:border-muted-soft/60 hover:shadow-[var(--shadow-soft)]">
+      <div className="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-3.5">
         <span
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-xl"
-          style={{ backgroundColor: feature.tint }}
+          className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-border bg-surface-alt"
         >
-          <Icon className="h-5 w-5" style={{ color: feature.color }} strokeWidth={1.9} />
+          <Icon className="h-5 w-5 text-foreground" strokeWidth={1.7} />
         </span>
         <span className="min-w-0">
-          <span className="block text-xs font-medium text-muted-foreground">{feature.number}</span>
-          <h3
-            className="mt-0.5 truncate text-[13px] font-semibold uppercase tracking-[0.06em]"
-            style={{ color: feature.color }}
-          >
+          <span className="block text-[13px] font-semibold text-muted-soft">
+            {String(feature.number).padStart(2, "0")}
+          </span>
+          <h3 className="mt-1 truncate text-[20px] font-semibold leading-[1.25] tracking-[-0.02em] text-foreground">
             {feature.title}
           </h3>
         </span>
       </div>
-      <p className="mt-3 text-[13px] leading-relaxed text-muted-foreground">
+      <p className="mt-4 text-[16px] leading-[1.55] text-muted-foreground">
         {feature.description}
       </p>
-      <span className="mt-4 flex justify-end">
-        <ArrowRight className="h-4 w-4 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:text-gold" />
+      <span className="mt-6 flex justify-end">
+        <ArrowRight className="h-4 w-4 text-muted-soft transition-all duration-200 group-hover:translate-x-[3px] group-hover:text-foreground" />
       </span>
     </article>
   );
