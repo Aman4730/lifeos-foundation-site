@@ -82,17 +82,17 @@ const features: Feature[] = [
 export function FeatureGrid() {
   return (
     <section id="features" className="scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <div className="container-x py-16 lg:py-[120px]">
         <Reveal className="text-center">
-          <h2 className="font-display text-3xl tracking-[-0.02em] text-navy sm:text-[2.6rem]">
+          <h2 className="text-[clamp(2.375rem,5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-foreground">
             All Your Life. One Place.
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-[620px] text-[17px] leading-[1.6] text-muted-foreground sm:text-[18px]">
             Everything you need to simplify, organize and grow.
           </p>
         </Reveal>
 
-        <ul className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <Reveal as="li" key={feature.title} delay={i * 60} className="h-full">
               <FeatureCard feature={feature} />
@@ -100,14 +100,14 @@ export function FeatureGrid() {
           ))}
         </ul>
 
-        <Reveal className="mt-12 flex justify-center">
+        <Reveal className="mt-16 flex justify-center">
           <a
             id="use-cases"
             href="#about"
-            className="group inline-flex scroll-mt-24 items-center gap-2 rounded-xl bg-navy px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] active:translate-y-0"
+            className="btn-base btn-primary group scroll-mt-24 px-6"
           >
             Explore All Features
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
           </a>
         </Reveal>
       </div>
