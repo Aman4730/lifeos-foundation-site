@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { cn } from "@/lib/utils";
 
@@ -27,24 +27,25 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-transparent transition-colors",
-        scrolled && "border-border/70 bg-background/85 backdrop-blur-md",
+        "sticky top-0 z-[1000] border-b border-transparent bg-[oklch(1_0_0_/_0.94)] transition-all duration-200 ease-out",
+        scrolled &&
+          "border-border bg-[oklch(1_0_0_/_0.97)] shadow-[0_1px_2px_oklch(0_0_0_/_0.04)] backdrop-blur-[14px]",
       )}
     >
-      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-8">
+      <nav className="container-x grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:h-[76px]">
         <a href="#home" className="min-w-0" aria-label="LifeOS home">
           <Logo />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
-          <ul className="flex items-center gap-7 text-[13px] text-muted-foreground">
+        <div className="hidden items-center gap-10 lg:flex">
+          <ul className="flex items-center gap-8 text-[15px] font-medium text-muted-foreground">
             {links.map((link, i) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   className={cn(
-                    "relative py-1 transition-colors hover:text-navy",
-                    i === 0 && "font-medium text-gold",
+                    "relative py-1 transition-colors duration-200 hover:text-foreground",
+                    i === 0 && "text-foreground",
                   )}
                 >
                   {link.label}
@@ -57,9 +58,10 @@ export function Navbar() {
           </ul>
           <a
             href="#founder"
-            className="rounded-lg bg-navy px-5 py-2.5 text-[13px] font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] active:translate-y-0"
+            className="btn-base btn-primary group"
           >
             Get Started
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
           </a>
         </div>
 
@@ -68,7 +70,7 @@ export function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-navy lg:hidden"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-border bg-surface text-foreground transition-colors hover:bg-surface-alt lg:hidden"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -76,13 +78,13 @@ export function Navbar() {
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
-          <ul className="mx-auto max-w-7xl px-5 py-3">
+          <ul className="container-x py-2">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-border/60 py-3 text-sm text-muted-foreground transition-colors hover:text-navy"
+                  className="block border-b border-border/70 py-3 text-[15px] font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </a>
@@ -92,7 +94,7 @@ export function Navbar() {
               <a
                 href="#founder"
                 onClick={() => setOpen(false)}
-                className="block rounded-lg bg-navy px-5 py-3 text-center text-sm font-medium text-primary-foreground"
+                className="btn-base btn-primary w-full"
               >
                 Get Started
               </a>
