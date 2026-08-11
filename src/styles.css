@@ -64,41 +64,44 @@
   --color-navy: var(--navy);
   --color-surface: var(--surface);
   --color-surface-alt: var(--surface-alt);
+  --color-muted-soft: var(--muted-soft);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.978 0.008 95);
-  --foreground: oklch(0.24 0.045 264);
+  --radius: 0.75rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.045 264);
+  --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.045 264);
-  --primary: oklch(0.22 0.048 264);
-  --primary-foreground: oklch(0.985 0.005 95);
-  --secondary: oklch(0.96 0.008 95);
-  --secondary-foreground: oklch(0.22 0.048 264);
-  --muted: oklch(0.955 0.008 95);
-  --muted-foreground: oklch(0.55 0.015 264);
-  --accent: oklch(0.69 0.115 82);
-  --accent-foreground: oklch(0.22 0.048 264);
-  --gold: oklch(0.69 0.115 82);
-  --gold-soft: oklch(0.82 0.09 84);
-  --navy: oklch(0.22 0.048 264);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.145 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.973 0 0);
+  --secondary-foreground: oklch(0.145 0 0);
+  --muted: oklch(0.973 0 0);
+  --muted-foreground: oklch(0.475 0.008 264);
+  --accent: oklch(0.973 0 0);
+  --accent-foreground: oklch(0.145 0 0);
+  --gold: oklch(0.66 0.1 82);
+  --gold-soft: oklch(0.8 0.075 84);
+  --navy: oklch(0.145 0 0);
   --surface: oklch(1 0 0);
-  --surface-alt: oklch(0.965 0.007 95);
+  --surface-alt: oklch(0.973 0 0);
+  --muted-soft: oklch(0.62 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.905 0.008 90);
-  --input: oklch(0.905 0.008 90);
-  --ring: oklch(0.69 0.115 82);
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
-  --shadow-soft: 0 1px 2px oklch(0.24 0.045 264 / 0.04), 0 8px 24px oklch(0.24 0.045 264 / 0.05);
-  --shadow-lift: 0 6px 14px oklch(0.24 0.045 264 / 0.06), 0 24px 48px oklch(0.24 0.045 264 / 0.1);
-  --shadow-phone: 0 40px 80px oklch(0.24 0.045 264 / 0.28);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.145 0 0);
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --shadow-soft: 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-lift: 0 4px 12px oklch(0 0 0 / 0.06), 0 12px 32px oklch(0 0 0 / 0.06);
+  --shadow-phone: 0 32px 70px oklch(0 0 0 / 0.22);
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -159,16 +162,91 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
   }
+
+  :focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @utility font-display {
   font-family: var(--font-display);
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 20px;
+  @media (min-width: 768px) {
+    padding-inline: 32px;
+  }
+  @media (min-width: 1024px) {
+    padding-inline: 40px;
+  }
+}
+
+@utility btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 11px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 12px 20px;
+  transition: all 220ms var(--ease-premium);
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility btn-primary {
+  background: var(--color-foreground);
+  color: var(--color-background);
+  border: 1px solid oklch(0 0 0 / 0.08);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility btn-secondary {
+  background: transparent;
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  &:hover {
+    border-color: oklch(0.848 0 0);
+    background: var(--color-surface-alt);
+    transform: translateY(-1px);
+  }
 }
 
 @utility reveal {
