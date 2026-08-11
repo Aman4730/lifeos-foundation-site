@@ -30,20 +30,20 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer id="blog" className="scroll-mt-24 border-t border-border bg-surface-alt">
-      <div className="container-page grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))]">
+    <footer id="blog" className="scroll-mt-24 border-t border-border bg-surface-alt/60">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))] lg:px-8">
         <div>
           <Logo />
-          <p className="mt-5 max-w-[220px] text-[15px] leading-[1.6] text-ink-soft">
+          <p className="mt-4 max-w-[200px] text-[13px] leading-relaxed text-muted-foreground">
             Your assistant, your memory, your life.
           </p>
-          <div className="mt-6 flex gap-2">
+          <div className="mt-5 flex gap-2">
             {[Twitter, Linkedin, Github].map((Icon, i) => (
               <a
                 key={i}
                 href="#home"
                 aria-label="LifeOS social profile"
-                className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface text-ink-soft transition-colors hover:border-ink hover:text-ink"
+                className="grid h-8 w-8 place-items-center rounded-lg border border-border bg-surface text-muted-foreground transition-colors hover:border-gold/50 hover:text-gold"
               >
                 <Icon className="h-3.5 w-3.5" />
               </a>
@@ -53,13 +53,13 @@ export function Footer() {
 
         {columns.map((col) => (
           <div key={col.title}>
-            <h3 className="text-[14px] font-semibold tracking-[-0.01em] text-ink">{col.title}</h3>
-            <ul className="mt-5 space-y-3">
+            <h3 className="text-[13px] font-semibold text-navy">{col.title}</h3>
+            <ul className="mt-4 space-y-2.5">
               {col.links.map((l) => (
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="text-[15px] text-ink-soft transition-colors hover:text-ink"
+                    className="text-[13px] text-muted-foreground transition-colors hover:text-gold"
                   >
                     {l.label}
                   </a>
@@ -70,15 +70,15 @@ export function Footer() {
         ))}
 
         <div>
-          <h3 className="text-[14px] font-semibold tracking-[-0.01em] text-ink">Contact</h3>
-          <ul className="mt-5 space-y-3 text-[15px] text-ink-soft">
+          <h3 className="text-[13px] font-semibold text-navy">Contact</h3>
+          <ul className="mt-4 space-y-2.5 text-[13px] text-muted-foreground">
             <li>
-              <a href="mailto:hello@lifeos.app" className="transition-colors hover:text-ink">
+              <a href="mailto:hello@lifeos.app" className="transition-colors hover:text-gold">
                 hello@lifeos.app
               </a>
             </li>
             <li>
-              <a href="tel:+911234567890" className="transition-colors hover:text-ink">
+              <a href="tel:+911234567890" className="transition-colors hover:text-gold">
                 +91 123 456 7890
               </a>
             </li>
@@ -87,7 +87,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="container-page flex flex-wrap items-center justify-between gap-3 py-6 text-[13px] text-subtle">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-5 text-xs text-muted-foreground lg:px-8">
           <p>© {new Date().getFullYear()} LifeOS. All rights reserved.</p>
           <p>Made with care for everyday life.</p>
         </div>

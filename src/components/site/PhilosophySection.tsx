@@ -21,39 +21,39 @@ const items = [
 
 export function PhilosophySection() {
   return (
-    <section id="about" className="scroll-mt-24 border-y border-border bg-surface-alt">
-      <div className="container-page grid items-center gap-12 py-20 lg:grid-cols-[0.85fr_1.2fr_0.9fr] lg:py-[120px]">
+    <section id="about" className="scroll-mt-24 border-y border-border bg-surface-alt/60">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[0.85fr_1.2fr_0.9fr] lg:px-8 lg:py-20">
         <Reveal>
-          <p className="eyebrow text-subtle">Designed around you</p>
-          <h2 className="display-section mt-5 text-ink lg:text-[clamp(36px,3.4vw,52px)]">
+          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold">
+            Designed around you
+          </p>
+          <h2 className="mt-4 font-display text-3xl leading-tight tracking-[-0.02em] text-navy sm:text-[2.1rem]">
             More Than an App.
             <br />
             It's Your Second Brain.
           </h2>
-          <p className="mt-6 max-w-[440px] text-[17px] leading-[1.65] text-ink-soft">
+          <p className="mt-4 max-w-sm text-[13.5px] leading-relaxed text-muted-foreground">
             LifeOS connects your digital life, remembers what matters, and helps you do more.
           </p>
           <a
             href="#founder"
-            className="group mt-8 inline-flex items-center gap-1.5 border-b border-ink/25 pb-1 text-[15px] font-semibold text-ink transition-colors hover:border-ink"
+            className="group mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-gold transition-colors hover:text-navy"
           >
             Learn More
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
           </a>
         </Reveal>
 
-        <Reveal delay={80} className="lg:border-x lg:border-border lg:px-10">
-          <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
+        <Reveal delay={80} className="lg:border-x lg:border-border lg:px-8">
+          <ul className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
             {items.map((item) => (
-              <li key={item.title} className="grid grid-cols-[auto_minmax(0,1fr)] gap-4">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-border bg-surface">
-                  <item.icon className="h-4 w-4 text-ink" strokeWidth={1.5} />
+              <li key={item.title} className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">
+                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-border bg-surface">
+                  <item.icon className="h-4 w-4 text-gold" strokeWidth={1.8} />
                 </span>
                 <span className="min-w-0">
-                  <h3 className="text-[17px] font-semibold tracking-[-0.015em] text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 text-[15px] leading-[1.55] text-ink-soft">
+                  <h3 className="text-[13px] font-semibold text-navy">{item.title}</h3>
+                  <p className="mt-0.5 text-[12.5px] leading-relaxed text-muted-foreground">
                     {item.text}
                   </p>
                 </span>
