@@ -36,18 +36,18 @@ const features: Feature[] = [
 export function FeatureGrid() {
   return (
     <section id="features" className="scroll-mt-24">
-      <div className="container-page py-20 lg:py-[120px]">
+      <div className="container-page py-16 sm:py-20 lg:py-[120px]">
         <Reveal className="mx-auto max-w-[720px] text-center">
           <p className="eyebrow text-subtle">Life Vaults</p>
           <h2 className="display-section mt-4 text-ink">
             All Your Life. One Place.
           </h2>
-          <p className="lead mx-auto mt-6 text-ink-soft">
+          <p className="mx-auto mt-6 max-w-[620px] text-[17px] leading-[1.6] text-ink-soft sm:text-[18px]">
             Everything you need to simplify, organize and grow.
           </p>
         </Reveal>
 
-        <ul className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <Reveal as="li" key={feature.title} delay={i * 60} className="h-full">
               <FeatureCard feature={feature} />
@@ -56,13 +56,9 @@ export function FeatureGrid() {
         </ul>
 
         <Reveal className="mt-16 flex justify-center">
-          <a
-            id="use-cases"
-            href="#about"
-            className="group inline-flex scroll-mt-24 items-center gap-2 rounded-lg bg-ink px-7 py-4 text-[15px] font-semibold text-primary-foreground transition-colors hover:bg-ink/90"
-          >
+          <a id="use-cases" href="#about" className="btn-base btn-primary group scroll-mt-24 px-7 py-4">
             Explore All Features
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
           </a>
         </Reveal>
       </div>
