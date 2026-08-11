@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 export function FounderBanner() {
   return (
     <section id="founder" className="scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+      <div className="mx-auto max-w-[1450px] px-5 py-14 lg:px-6">
         <Reveal>
           <div className="grid items-center gap-8 rounded-2xl bg-navy px-6 py-8 shadow-[var(--shadow-lift)] sm:px-10 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-10">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl border border-gold/30 bg-white/5">

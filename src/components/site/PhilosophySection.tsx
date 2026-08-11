@@ -22,7 +22,7 @@ const items = [
 export function PhilosophySection() {
   return (
     <section id="about" className="scroll-mt-24 border-y border-border bg-surface-alt/60">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[0.85fr_1.2fr_0.9fr] lg:px-8 lg:py-20">
+      <div className="mx-auto grid max-w-[1450px] items-center gap-10 px-5 py-16 lg:grid-cols-[0.85fr_1.2fr_0.9fr] lg:px-6 lg:py-20">
         <Reveal>
           <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold">
             Designed around you
@@ -44,7 +44,7 @@ export function PhilosophySection() {
           </a>
         </Reveal>
 
-        <Reveal delay={80} className="lg:border-x lg:border-border lg:px-8">
+        <Reveal delay={80} className="lg:border-x lg:border-border lg:px-6">
           <ul className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
             {items.map((item) => (
               <li key={item.title} className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">

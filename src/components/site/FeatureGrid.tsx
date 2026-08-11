@@ -82,7 +82,7 @@ const features: Feature[] = [
 export function FeatureGrid() {
   return (
     <section id="features" className="scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-[1450px] px-5 py-16 lg:px-6 lg:py-24">
         <Reveal className="text-center">
           <h2 className="font-display text-3xl tracking-[-0.02em] text-navy sm:text-[2.6rem]">
             All Your Life. One Place.

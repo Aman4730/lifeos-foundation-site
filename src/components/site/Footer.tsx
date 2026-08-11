@@ -31,7 +31,7 @@ const columns = [
 export function Footer() {
   return (
     <footer id="blog" className="scroll-mt-24 border-t border-border bg-surface-alt/60">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))] lg:px-8">
+      <div className="mx-auto grid max-w-[1450px] gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))] lg:px-6">
         <div>
           <Logo />
           <p className="mt-4 max-w-[200px] text-[13px] leading-relaxed text-muted-foreground">
@@ -87,7 +87,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-5 text-xs text-muted-foreground lg:px-8">
+        <div className="mx-auto flex max-w-[1600px] flex-wrap items-center justify-between gap-3 px-5 py-5 text-xs text-muted-foreground lg:px-6">
           <p>© {new Date().getFullYear()} LifeOS. All rights reserved.</p>
           <p>Made with care for everyday life.</p>
         </div>

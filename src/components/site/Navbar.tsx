@@ -31,13 +31,13 @@ export function Navbar() {
         scrolled && "border-border/70 bg-background/85 backdrop-blur-md",
       )}
     >
-      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-8">
-        <a href="#home" className="min-w-0" aria-label="LifeOS home">
+      <nav className="mx-auto grid max-w-[1450px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-6">
+        <a href="#home" className="mt-3 min-w-0" aria-label="LifeOS home">
           <Logo />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
-          <ul className="flex items-center gap-7 text-[13px] text-muted-foreground">
+        <div className="hidden items-center gap-24 lg:flex">
+          <ul className="flex items-center gap-7 text-[17px] text-muted-foreground">
             {links.map((link, i) => (
               <li key={link.href}>
                 <a
@@ -57,7 +57,7 @@ export function Navbar() {
           </ul>
           <a
             href="#founder"
-            className="rounded-lg bg-navy px-5 py-2.5 text-[13px] font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] active:translate-y-0"
+            className="rounded-lg bg-navy px-5 py-2.5 text-[16px] font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] active:translate-y-0"
           >
             Get Started
           </a>
@@ -76,13 +76,13 @@ export function Navbar() {
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
-          <ul className="mx-auto max-w-7xl px-5 py-3">
+          <ul className="mx-auto max-w-[1600px] px-5 py-3">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-border/60 py-3 text-sm text-muted-foreground transition-colors hover:text-navy"
+                  className="block border-b border-border/60 py-3 text-[17px] text-muted-foreground transition-colors hover:text-navy"
                 >
                   {link.label}
                 </a>

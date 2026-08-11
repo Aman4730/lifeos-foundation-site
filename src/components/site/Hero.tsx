@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-gold-soft/15 blur-[120px]" />
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:pb-24 lg:pt-16">
+      <div className="mx-auto grid max-w-[1450px] items-center gap-14 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-6 lg:pb-24 lg:pt-16">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-navy/70">
             <Sparkles className="h-3 w-3 text-gold" />

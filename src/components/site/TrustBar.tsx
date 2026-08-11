@@ -12,7 +12,7 @@ const brands = [
 export function TrustBar() {
   return (
     <section className="border-y border-border bg-surface-alt/60">
-      <div className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
+      <div className="mx-auto max-w-[1450px] px-5 py-8 lg:px-6">
         <p className="text-center text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
           Trusted &amp; loved by leading brands
         </p>

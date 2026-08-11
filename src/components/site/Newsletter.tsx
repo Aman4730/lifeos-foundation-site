@@ -15,7 +15,7 @@ export function Newsletter() {
 
   return (
     <section id="pricing" className="scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-5 pb-16 lg:px-8">
+      <div className="mx-auto max-w-[1450px] px-5 pb-16 lg:px-6">
         <Reveal>
           <div className="grid items-center gap-6 rounded-2xl border border-border bg-surface px-6 py-6 shadow-[var(--shadow-soft)] sm:px-8 lg:grid-cols-[minmax(0,1fr)_auto]">
             <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
