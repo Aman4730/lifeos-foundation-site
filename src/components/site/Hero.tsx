@@ -1,5 +1,5 @@
 import { ArrowRight, Play, Sparkles, Star } from "lucide-react";
-import { PhoneMockup } from "./PhoneMockup";
+import heroPhoneImage from "@/assets/hero-phone.png";
 import { Avatar } from "./Avatar";
 import { Reveal } from "./Reveal";
 
@@ -7,9 +7,14 @@ const people = ["Arjun P", "Neha S", "Ravi K", "Maya D"];
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-[460px] overflow-hidden bg-cover bg-right bg-no-repeat sm:min-h-[540px] lg:min-h-[660px]"
+      style={{ backgroundImage: `url(${heroPhoneImage})` }}
+    >
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background from-5% via-background/55 via-32% to-transparent to-62% lg:to-55%" />
       <div className="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-gold-soft/15 blur-[120px]" />
-      <div className="mx-auto grid max-w-[1450px] items-center gap-14 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-6 lg:pb-24 lg:pt-16">
+      <div className="relative mx-auto grid max-w-[1450px] items-center gap-14 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-6 lg:pb-24 lg:pt-16">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.16em] text-navy/70">
             <Sparkles className="h-3 w-3 text-gold" />
@@ -65,9 +70,7 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={120} className="lg:pl-6">
-          <PhoneMockup />
-        </Reveal>
+        <div className="hidden lg:block" aria-hidden="true" />
       </div>
     </section>
   );

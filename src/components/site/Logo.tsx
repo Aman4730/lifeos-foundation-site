@@ -7,7 +7,7 @@ export function Logo({ className }: { className?: string }) {
       <img
         src={logoImage}
         alt="LifeOS"
-        className="h-10 w-auto shrink-0 sm:h-12"
+        className="h-8 w-auto shrink-0 sm:h-9"
       />
     </span>
   );
