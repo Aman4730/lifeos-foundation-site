@@ -32,23 +32,13 @@ export function Navbar() {
           "border-border bg-[oklch(1_0_0_/_0.97)] shadow-[0_1px_2px_oklch(0_0_0_/_0.04)] backdrop-blur-[14px]",
       )}
     >
-<<<<<<< HEAD
       <nav className="mx-auto grid max-w-[1450px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-6">
-        <a href="#home" className="mt-3 min-w-0" aria-label="LifeOS home">
+        <a href="#home" className="min-w-0" aria-label="LifeOS home">
           <Logo />
         </a>
 
         <div className="hidden items-center gap-24 lg:flex">
           <ul className="flex items-center gap-7 text-[17px] text-muted-foreground">
-=======
-      <nav className="container-x grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 lg:h-[76px]">
-        <a href="#home" className="min-w-0" aria-label="LifeOS home">
-          <Logo />
-        </a>
-
-        <div className="hidden items-center gap-10 lg:flex">
-          <ul className="flex items-center gap-8 text-[15px] font-medium text-muted-foreground">
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
             {links.map((link, i) => (
               <li key={link.href}>
                 <a
@@ -68,11 +58,7 @@ export function Navbar() {
           </ul>
           <a
             href="#founder"
-<<<<<<< HEAD
             className="rounded-lg bg-navy px-5 py-2.5 text-[16px] font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)] active:translate-y-0"
-=======
-            className="btn-base btn-primary group"
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
           >
             Get Started
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-[3px]" />
@@ -92,21 +78,13 @@ export function Navbar() {
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
-<<<<<<< HEAD
           <ul className="mx-auto max-w-[1600px] px-5 py-3">
-=======
-          <ul className="container-x py-2">
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-<<<<<<< HEAD
                   className="block border-b border-border/60 py-3 text-[17px] text-muted-foreground transition-colors hover:text-navy"
-=======
-                  className="block border-b border-border/70 py-3 text-[15px] font-medium text-muted-foreground transition-colors hover:text-foreground"
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
                 >
                   {link.label}
                 </a>

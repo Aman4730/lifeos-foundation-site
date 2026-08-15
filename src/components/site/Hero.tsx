@@ -7,7 +7,6 @@ const people = ["Arjun P", "Neha S", "Ravi K", "Maya D"];
 
 export function Hero() {
   return (
-<<<<<<< HEAD
     <section
       id="home"
       className="relative min-h-[460px] overflow-hidden bg-cover bg-right bg-no-repeat sm:min-h-[540px] lg:min-h-[660px]"
@@ -16,11 +15,6 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background from-5% via-background/55 via-32% to-transparent to-62% lg:to-55%" />
       <div className="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-gold-soft/15 blur-[120px]" />
       <div className="relative mx-auto grid max-w-[1450px] items-center gap-14 px-5 pb-16 pt-10 lg:grid-cols-2 lg:gap-8 lg:px-6 lg:pb-24 lg:pt-16">
-=======
-    <section id="home" className="relative overflow-hidden">
-      <div className="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-gold-soft/10 blur-[120px]" />
-      <div className="container-x grid items-center gap-14 pb-16 pt-12 lg:grid-cols-2 lg:gap-12 lg:pb-[120px] lg:pt-20">
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-[13px] font-semibold tracking-[-0.005em] text-muted-foreground">
             <Sparkles className="h-3 w-3 text-gold" />

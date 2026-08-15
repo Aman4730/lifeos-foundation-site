@@ -28,11 +28,7 @@ export function Testimonials() {
 
   return (
     <section id="lifescore" className="scroll-mt-24">
-<<<<<<< HEAD
       <div className="mx-auto max-w-[1450px] px-5 py-14 lg:px-6">
-=======
-      <div className="container-x py-16 lg:py-[100px]">
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
         <Reveal className="text-center">
           <p className="text-[13px] font-semibold tracking-[-0.005em] text-gold">
             What our users say

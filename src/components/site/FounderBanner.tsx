@@ -4,11 +4,7 @@ import { Reveal } from "./Reveal";
 export function FounderBanner() {
   return (
     <section id="founder" className="scroll-mt-24">
-<<<<<<< HEAD
       <div className="mx-auto max-w-[1450px] px-5 py-14 lg:px-6">
-=======
-      <div className="container-x py-16 lg:py-20">
->>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
         <Reveal>
           <div className="grid items-center gap-8 rounded-[16px] bg-[oklch(0.115_0_0)] px-6 py-12 sm:px-12 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-12">
             <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl border border-gold/30 bg-[oklch(1_0_0_/_0.05)]">
