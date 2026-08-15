@@ -4,31 +4,35 @@ import { Reveal } from "./Reveal";
 export function FounderBanner() {
   return (
     <section id="founder" className="scroll-mt-24">
+<<<<<<< HEAD
       <div className="mx-auto max-w-[1450px] px-5 py-14 lg:px-6">
+=======
+      <div className="container-x py-16 lg:py-20">
+>>>>>>> eaeb35e1a1b3d73cc89a75de1f83d7c77819980c
         <Reveal>
-          <div className="grid items-center gap-8 rounded-2xl bg-navy px-6 py-8 shadow-[var(--shadow-lift)] sm:px-10 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-10">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl border border-gold/30 bg-white/5">
+          <div className="grid items-center gap-8 rounded-[16px] bg-[oklch(0.115_0_0)] px-6 py-12 sm:px-12 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:gap-12">
+            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl border border-gold/30 bg-[oklch(1_0_0_/_0.05)]">
               <Crown className="h-6 w-6 text-gold" />
             </span>
             <div className="min-w-0">
-              <h2 className="font-display text-2xl tracking-[-0.01em] text-primary-foreground sm:text-[1.75rem]">
+              <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-semibold leading-[1.1] tracking-[-0.035em] text-primary-foreground">
                 Be a Founder. Get Early Access.
               </h2>
-              <p className="mt-2 max-w-md text-[13px] leading-relaxed text-primary-foreground/70">
+              <p className="mt-4 max-w-[620px] text-[17px] leading-[1.6] text-[oklch(0.72_0_0)]">
                 Join thousands of early supporters and shape the future of personal AI for everyday
                 life.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4">
               <button
                 type="button"
-                className="rounded-lg bg-gold px-6 py-3 text-sm font-medium text-navy transition-all hover:-translate-y-0.5 hover:bg-gold-soft active:translate-y-0"
+                className="btn-base border border-transparent bg-background px-6 text-foreground hover:-translate-y-[2px] hover:shadow-[var(--shadow-lift)]"
               >
                 Become a Founder
               </button>
               <button
                 type="button"
-                className="inline-flex items-center gap-2 rounded-lg border border-gold/50 px-6 py-3 text-sm font-medium text-gold transition-colors hover:bg-gold/10"
+                className="btn-base border border-[oklch(1_0_0_/_0.22)] px-6 text-primary-foreground hover:-translate-y-[1px] hover:border-[oklch(1_0_0_/_0.4)]"
               >
                 <UserPlus className="h-4 w-4" />
                 Refer a Friend
